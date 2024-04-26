@@ -1,0 +1,20 @@
+apiVersion: Versi API Kubernetes yang digunakan untuk objek deployment.
+kind: Jenis objek, dalam hal ini adalah "Deployment".
+metadata: Informasi metadata untuk deployment, termasuk nama dan label.
+name: Nama deployment, dalam contoh ini adalah "nginx-deployment".
+labels: Label untuk deployment, dalam contoh ini adalah "app: nginx".
+spec: Spesifikasi deployment.
+replicas: Jumlah replika pod yang akan dibuat, dalam contoh ini adalah 3.
+selector: Selector yang digunakan untuk memilih pod yang akan dimasukkan ke dalam deployment.
+matchLabels: Label yang harus cocok dengan pod yang akan dimasukkan ke dalam deployment, dalam contoh ini adalah "app: nginx".
+template: Template untuk pod yang akan dibuat oleh deployment.
+metadata: Metadata untuk pod template.
+labels: Label yang diterapkan pada pod yang akan dibuat, dalam contoh ini adalah "app: nginx".
+spec: Spesifikasi untuk pod yang akan dibuat.
+containers: Daftar container dalam pod.
+name: Nama container, dalam contoh ini adalah "nginx-container".
+image: Image Docker yang akan digunakan untuk container, dalam contoh ini menggunakan Nginx dengan tag "latest".
+ports: Konfigurasi port yang akan diekspos oleh container.
+containerPort: Port yang diekspos oleh container, dalam contoh ini adalah port 80.
+restartPolicy: Kebijakan restart untuk pod, dalam contoh ini adalah "Always" yang berarti Kubernetes akan selalu mencoba untuk menghidupkan kembali pod jika gagal.
+dnsPolicy: Kebijakan DNS untuk pod, dalam contoh ini adalah "ClusterFirst" yang menunjukkan bahwa pod akan menggunakan DNS cluster untuk resolusi DNS.
